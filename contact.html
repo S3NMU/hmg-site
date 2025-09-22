@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — HMG</title>
+  <meta name="description" content="Contact Himilo Management Group (HMG) — phone, email, and address." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg">
+</head>
+<body>
+<div class="topbar">
+  <nav class="nav">
+    <a href="./" class="brand" aria-label="HMG Home">
+  <img src="assets/hmg-logo.png" alt="HIMILO Consulting & Development logo" class="brand-img" />
+</a>
+
+    <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a class="navlink" href="index.html">Home</a></li>
+      <li><a class="navlink" href="about.html">About</a></li>
+      <li><a class="navlink" href="services.html">Services</a></li>
+      <li><a class="navlink" href="activities.html">Activities</a></li>
+      <li><a class="navlink" href="contact.html">Contact</a></li>
+      <li><a class="navlink" href="login.html">Log In/Sign Up</a></li>
+    </ul>
+  </nav>
+</div>
+
+<section>
+  <div class="container section">
+    <h2>Contact Us</h2>
+    <div class="two-col" style="margin-top:16px">
+      <div class="card">
+        <h3>Get in Touch</h3>
+        <p>Phone: +2526 18 200 034<br/>Email: <a href="mailto:info@himilogroup.com">info@himilogroup.com</a><br/>Address: Airport Road, Bulohubey, Wadjir District, Mogadishu, Somalia</p>
+
+        <!-- For Netlify Forms later: name="contact" method="POST" data-netlify="true" + hidden form-name -->
+        <form data-enhance>
+          <div class="input">
+            <label for="cname">Name</label>
+            <input id="cname" type="text" required placeholder="Your name">
+          </div>
+          <div class="input">
+            <label for="cemail">Email</label>
+            <input id="cemail" type="email" required placeholder="you@example.com">
+          </div>
+          <div class="input">
+            <label for="ctel">Phone</label>
+            <input id="ctel" type="tel" placeholder="+252 ...">
+          </div>
+          <div class="input">
+            <label for="cmsg">Message</label>
+            <textarea id="cmsg" required placeholder="How can HMG help you?"></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Find Us</h3>
+        <p class="muted">We’re located on Airport Road, Bulohubey, Wadjir District, Mogadishu. For meetings, please schedule in advance.</p>
+        <iframe title="Map placeholder" style="width:100%;height:280px;border:0;border-radius:12px" srcdoc="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <img src="assets/logo.svg" alt="HMG logo" width="160" height="42" style="display:block;margin-bottom:10px" />
+      <p class="small">HMG — connect with our team.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <div class="footer-links small">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="activities.html">Activities</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Log In / Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-links small">
+        <span>📞 +2526 18 200 034</span>
+        <a href="mailto:info@himilogroup.com">info@himilogroup.com</a>
+        <span>📍 Airport Road, Bulohubey, Wadjir District, Mogadishu, Somalia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[build]
+  publish = "."
+  command = ""
+
+# Optional: turn on asset minification in Netlify’s post-processing
+[build.processing]
+  skip_processing = false
+  [build.processing.css]
+    minify = true
+  [build.processing.js]
+    minify = true
+  [build.processing.images]
+    compress = true
+
+# Canonical domain: choose ONE canonical (example uses apex without www)
+[[redirects]]
+  from = "http://himilogroup.com/*"
+  to = "https://himilogroup.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.himilogroup.com/*"
+  to = "https://himilogroup.com/:splat"
+  status = 301
+  force = true
+
+# Security + caching headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # HTML: short cache so updates appear immediately
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # Static assets: long cache for speed
+    Cache-Control = "public, max-age=31536000, immutable"
